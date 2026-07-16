@@ -40,64 +40,22 @@ cuadroBotones.setAlignment(Pos.CENTER);
 view.getChildren().addAll(pantalla, cuadroBotones);//Alineado al centro
 
 //Primer boton
-Button btnUno = new Button("1");
-btnUno.setPrefSize(50, 50);
+Button btnUno = nuevoBoton("1");
 
-btnUno.setOnMousePressed(e -> {
-    btnUno.setStyle("-fx-background-color: #E6E6F2;-fx-text-fill:white; -ft-background-radius:5px; -fx-cursor: hand;");
-btnUno.setTranslateY(2);
-});
 
-btnUno.setOnMouseReleased(e -> {
-btnUno.setStyle("-fx-background-color: #E1E1EB;");
-btnUno.setTranslateY(0);
-});
-
-btnUno.setFont(Font.font("Consolas", FontWeight.NORMAL, 20));
+//btnUno.setFont(Font.font("Consolas", FontWeight.NORMAL, 20));
 
 // Segundo Boton 
-Button btnDos = new Button("2");
-btnDos.setPrefSize(50, 50);
+Button btnDos = nuevoBoton("2");
 
-btnDos.setOnMousePressed(e -> {
-    btnDos.setStyle("-fx-background-color: #E6E6F2;-fx-text-fill:white; -ft-background-radius:5px; -fx-cursor: hand;");
-btnDos.setTranslateY(0);
-});
-btnDos.setFont(Font.font("Consolas", FontWeight.NORMAL, 20));
-
-
-btnDos.setOnMouseReleased(e -> {
-btnDos.setStyle("-fx-background-color: #E1E1EB;");
-btnDos.setTranslateY(0);
-});
 
 //Boton tres
-Button btnTres = new Button("3");
-btnTres.setPrefSize(50, 50);
-btnTres.setOnMousePressed(e -> {
-    btnTres.setStyle("-fx-background-color: #E6E6F2; -fx-text-fill:white; -ft-background-radius:5px; -fx-cursor: hand;");
-btnTres.setTranslateY(0);
-});
-btnTres.setFont(Font.font("Consolas", FontWeight.NORMAL, 20));
+Button btnTres = nuevoBoton("3");
 
-btnTres.setOnMouseReleased(e -> {
-btnTres.setStyle("-fx-background-color: #E1E1EB;");
-btnTres.setTranslateY(0);
-});
 
 //Boton mas
-Button btnMas = new Button("+");
-btnMas.setPrefSize(50, 50);
-btnMas.setOnMousePressed(e -> {
-    btnMas.setStyle("-fx-background-color: #E6E6F2;-fx-text-fill:white; -ft-background-radius:5px; -fx-cursor: hand;");
-btnMas.setTranslateY(0);
-});
-btnMas.setFont(Font.font("Consolas", FontWeight.NORMAL, 20));
+Button btnMas = nuevoBoton("+");
 
-btnMas.setOnMouseReleased(e -> {
-btnMas.setStyle("-fx-background-color: #E1E1EB;");
-btnMas.setTranslateY(0);
-});
 
 cuadroBotones.add(btnUno, 0, 3);
 cuadroBotones.add(btnDos, 1, 3);
@@ -115,6 +73,17 @@ private Button nuevoBoton(String texto) {
 Button btn = new Button(texto);
 
 
+btn.setPrefSize(50, 50);
+btn.setStyle("-fx-background-color: #E6E6F2; -fx-text-fill:white; -ft-background-radius:5px; -fx-cursor: hand;");
+
+btn.setOnMousePressed(e ->{
+btn.setStyle("-fx-background-color: #E6E6F2;");
+btn.setTranslateY(2);
+});
+btn.setOnMouseReleased(e ->{
+btn.setStyle("-fx-background-color: #E1E1EB;");
+btn.setTranslateY(0);
+});
 
 //configuracion de boton
 //tamaño, el estilo, sus fuciones
