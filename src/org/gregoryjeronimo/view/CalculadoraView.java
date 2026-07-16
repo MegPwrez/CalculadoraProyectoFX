@@ -11,7 +11,7 @@ import javafx.scene.text.FontWeight;
 
 /**
  *
- * @author Gregory Jeronimo 2026116s
+ * @author Gregory Jeronimo 
  */
 
 
@@ -106,6 +106,8 @@ cuadroBotones.add(btnMas, 3, 3);
 
 view.getChildren().addAll(pantalla, cuadroBotones);
         }
+
+//Boton resumido
 public VBox  getView(){
  return view;
 }
