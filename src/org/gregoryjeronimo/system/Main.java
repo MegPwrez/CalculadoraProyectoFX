@@ -14,9 +14,9 @@ public class Main extends Application {
         CalculadoraView calculadora = new CalculadoraView();
 
         // Se le pasa la vista directamente a la escena
-        Scene scene = new Scene(calculadora.getView(), 260, 390);
+        Scene scene = new Scene(calculadora.getView(), 260, 460);
 
-        primaryStage.setTitle("Calculadora Gregory");
+        primaryStage.setTitle("Calculoฅ^•ﻌ•^ฅ");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
