@@ -23,7 +23,7 @@ public class CalculadoraView {
         view = new VBox(15);
         view.setPadding(new Insets(15));
         view.setAlignment(Pos.CENTER);
-        view.setStyle("-fx-Microsoft JhengHei-color: #F2F2FC;");
+        view.setStyle("-fx-background-color: #D4EAFA;");
 
         pantalla = new Label("0");
         pantalla.setFont(Font.font("Consolas", FontWeight.BOLD, 40));
@@ -52,24 +52,34 @@ public class CalculadoraView {
         Button btnMenos = nuevoBoton("-");
           Button btnDivicion = nuevoBoton("/");
             Button btnMultiplicacion = nuevoBoton("*");
+             Button btnPorsentaje = nuevoBoton("%");
+                Button btnPotencia = nuevoBoton("^");
+                Button btnRaiz = nuevoBoton("√");
+                   Button btnDibujo = nuevoBoton("ʕ•ᴥ•ʔ");
+              
               
         
+      
         cuadroBotones.add(btnUno, 0, 3);
         cuadroBotones.add(btnDos, 1, 3);
         cuadroBotones.add(btnTres, 2, 3);
+        cuadroBotones.add(btnClean, 3, 3);
+        cuadroBotones.add(btnCinco, 0, 4);  // 5 a la izquierda
+        cuadroBotones.add(btnCuatro, 1, 4); // 4 en medio
+        cuadroBotones.add(btnSeis, 2, 4);   // 6 a la derecha
         cuadroBotones.add(btnMas, 3, 4);
-        cuadroBotones.add(btnIgual, 3, 6);
-        cuadroBotones.add(btnClean, 3, 3);//3,6
-        cuadroBotones.add(btnCuatro, 1, 4);
-        cuadroBotones.add(btnMenos, 3, 5);
-        cuadroBotones.add(btnCinco, 0, 4);
-        cuadroBotones.add(btnSeis, 2, 4);
         cuadroBotones.add(btnSiete, 0, 5);
         cuadroBotones.add(btnOcho, 1, 5);
         cuadroBotones.add(btnNueve, 2, 5);
+        cuadroBotones.add(btnMenos, 3, 5);
         cuadroBotones.add(btnCero, 0, 6);
-         cuadroBotones.add(btnDivicion, 1, 6);
-         cuadroBotones.add(btnMultiplicacion, 2, 6);
+        cuadroBotones.add(btnDivicion, 1, 6);
+        cuadroBotones.add(btnMultiplicacion, 2, 6);
+        cuadroBotones.add(btnIgual, 3, 6);
+       cuadroBotones.add(btnDibujo, 0, 7); 
+       cuadroBotones.add(btnPotencia, 1, 7);
+        cuadroBotones.add(btnPorsentaje, 2, 7);
+        cuadroBotones.add(btnRaiz, 3, 7);
 
 
         view.getChildren().addAll(pantalla, cuadroBotones);
@@ -83,17 +93,17 @@ public class CalculadoraView {
         Button btn = new Button(texto);
 
         btn.setPrefSize(50, 50);
-        btn.setStyle("-fx-Microsoft JhengHei-color: #E6E6F2; -fx-text-fill: #333333; -fx-Microsoft JhengHei-radius: 5px; -fx-cursor: hand;");
+        btn.setStyle("-fx-background-color: #A5CBE8; -fx-text-fill: #333333; -fx-background-radius: 5px; -fx-cursor: hand;");
 
         // --- ESTA LÍNEA ES LA QUE HACE QUE FUNCIONEN LOS CLICS ---
         btn.setOnAction(e -> controller.procesoDeEntrada(texto, pantalla));
 
         btn.setOnMousePressed(e -> {
-            btn.setStyle("-fx-Microsoft JhengHei-color: #D1D1E0; -fx-text-fill: #333333; -fx-Microsoft JhengHei-radius: 5px;");
+            btn.setStyle("-fx-background-color: #A5CBE8; -fx-text-fill: #333333; -fx-background-radius: 5px;");
             btn.setTranslateY(2);
         });
         btn.setOnMouseReleased(e -> {
-            btn.setStyle("-fx-Microsoft JhengHei-color: #E6E6F2; -fx-text-fill: #333333; -fx-Microsoft JhengHei-radius: 5px;");
+            btn.setStyle("-fx-background-color: #A5CBE8; -fx-text-fill: #333333; -fx-background-radius: 5px;");
             btn.setTranslateY(0);
         });
 
