@@ -54,6 +54,8 @@ public class CalculadoraController {
                 opcion1 = resultadoMultiplicacion(opcion1, opcion2);
             } else if (operador.equals("/")) {
                 opcion1 = resultadoDivision(opcion1, opcion2);
+            } else if (operador.equals("^")) {
+                opcion1 = resultadoRaiz(opcion1, opcion2);
             } 
 
             operador = "";
@@ -72,21 +74,21 @@ public class CalculadoraController {
     }
  
    
- 
+ // suma
     private String resultadoSuma(String numeroUno, String numeroDos){
          int datoUno = Integer.parseInt(numeroUno);
                   int datoDos = Integer.parseInt(numeroDos);
          int suma = datoUno + datoDos;
          return String.valueOf(suma);
     }
- 
+ //resta
     private String resultadoResta(String numeroUno, String numeroDos){
          int datoUno = Integer.parseInt(numeroUno);
          int datoDos = Integer.parseInt(numeroDos);
                  int resta = datoUno - datoDos;
          return String.valueOf(resta);
     }
- 
+ //multiplicacion
     private String resultadoMultiplicacion(String numeroUno, String numeroDos){
              int datoUno = Integer.parseInt(numeroUno);
          int datoDos = Integer.parseInt(numeroDos);
@@ -94,6 +96,7 @@ public class CalculadoraController {
          return String.valueOf(multiplicacion);
     }
  
+// divicion
     private String resultadoDivision(String numeroUno, String numeroDos){
          double datoUno = Double.parseDouble(numeroUno);
          double datoDos = Double.parseDouble(numeroDos);
@@ -102,9 +105,14 @@ public class CalculadoraController {
         
             
          }
-         
+         // Raiz cuadrada
     }
 
-    
+     private String resultadoRaiz(String numeroUno, String numeroDos){
+             int datoUno = Integer.parseInt(numeroUno);
+         int datoDos = Integer.parseInt(numeroDos);
+         int raizCuadrada = datoUno ^ datoDos;
+         return String.valueOf(raizCuadrada);
+    }
 
 
