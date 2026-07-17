@@ -180,20 +180,8 @@ public class CalculadoraController {
         }
     }
 
-    // Cambio de signo
-    private String cambioDeSigno(String numero) {
-        if (numero.isEmpty() || numero.equals("Error")) return "0";
-        
-        try {
-            double dato = Double.parseDouble(numero);
-            dato = dato * -1;
-            return formatearResultado(dato);
-        } catch (NumberFormatException e) {
-            return "Error";
-        }
-    }
 
-    // Método auxiliar para limpiar formatos decimales innecesarios (.0) y capturar errores de desbordamiento
+
     private String formatearResultado(double resultado) {
         if (Double.isNaN(resultado) || Double.isInfinite(resultado)) {
             return "Error";
@@ -204,5 +192,3 @@ public class CalculadoraController {
         return String.valueOf(resultado);
     }
 }
-
-
