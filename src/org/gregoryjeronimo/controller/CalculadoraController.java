@@ -105,14 +105,15 @@ public class CalculadoraController {
         
             
          }
-         // Raiz cuadrada
-    }
-
+       // Raiz cuadrada
+    
      private String resultadoRaiz(String numeroUno, String numeroDos){
              int datoUno = Integer.parseInt(numeroUno);
          int datoDos = Integer.parseInt(numeroDos);
          int raizCuadrada = datoUno ^ datoDos;
          return String.valueOf(raizCuadrada);
     }
+
+}
 
 

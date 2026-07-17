@@ -23,7 +23,7 @@ public class CalculadoraView {
         view = new VBox(15);
         view.setPadding(new Insets(15));
         view.setAlignment(Pos.CENTER);
-        view.setStyle("-fx-background-color: #F2F2FC;");
+        view.setStyle("-fx-Microsoft JhengHei-color: #F2F2FC;");
 
         pantalla = new Label("0");
         pantalla.setFont(Font.font("Consolas", FontWeight.BOLD, 40));
@@ -83,17 +83,17 @@ public class CalculadoraView {
         Button btn = new Button(texto);
 
         btn.setPrefSize(50, 50);
-        btn.setStyle("-fx-background-color: #E6E6F2; -fx-text-fill: #333333; -fx-background-radius: 5px; -fx-cursor: hand;");
+        btn.setStyle("-fx-Microsoft JhengHei-color: #E6E6F2; -fx-text-fill: #333333; -fx-Microsoft JhengHei-radius: 5px; -fx-cursor: hand;");
 
         // --- ESTA LÍNEA ES LA QUE HACE QUE FUNCIONEN LOS CLICS ---
         btn.setOnAction(e -> controller.procesoDeEntrada(texto, pantalla));
 
         btn.setOnMousePressed(e -> {
-            btn.setStyle("-fx-background-color: #D1D1E0; -fx-text-fill: #333333; -fx-background-radius: 5px;");
+            btn.setStyle("-fx-Microsoft JhengHei-color: #D1D1E0; -fx-text-fill: #333333; -fx-Microsoft JhengHei-radius: 5px;");
             btn.setTranslateY(2);
         });
         btn.setOnMouseReleased(e -> {
-            btn.setStyle("-fx-background-color: #E6E6F2; -fx-text-fill: #333333; -fx-background-radius: 5px;");
+            btn.setStyle("-fx-Microsoft JhengHei-color: #E6E6F2; -fx-text-fill: #333333; -fx-Microsoft JhengHei-radius: 5px;");
             btn.setTranslateY(0);
         });
 
