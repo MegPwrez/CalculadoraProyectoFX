@@ -1,6 +1,6 @@
     # CalculadoraProyectoFX
 ### Proyecto di Hoja de trabajo 1
-Sobre elementos básicos de JavaFX
+Sobre elementos básicos de JavaFX en CalculadoraFX
 
 ## Estructura
 org.gregoryjeronimo
@@ -26,4 +26,6 @@ org.gregoryjeronimo
 -Funciones en base a lo visto en clase
 
 # Enlace de video
+
+-- https://youtu.be/dqpU6e36V2M
  
